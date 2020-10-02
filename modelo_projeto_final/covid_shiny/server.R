@@ -24,12 +24,29 @@ shinyServer(function(input, output) {
     output$distPlot <- renderPlotly({
 
         # Criar banco de dados com cidade
-        city_selector    <- input$choose_city
+        city_selector    <- input$escolher_cidade
         city_data <- 
             covid19 %>% 
+            # aqui aplica a selecao do usuario para a construcao do grafico 
             filter(selector == city_selector) %>% 
+            #aqui seleciona as colunas para apresentacao no grafico 
             select(date, last_available_confirmed, last_available_deaths, 
                    rolling_avg7d) %>% 
+            # essa funcao gather serve para fazer a transposicao dos dados, invertendo linhas para colunas e vice-versa
+            # exemplo
+            #-----------------------------------------------
+            # codigo produto | descricao produto | preco 
+            #-----------------------------------------------
+            # ban001         | banana            | 1.00
+            # lar001         | laranja           | 2.00
+            # mac001         | maca              | 1.50
+            
+            #usando a funcao gather ficaria assim 
+            
+            # ban001 | lar001 | mac001 isso para a primeira coluna, e para todas as outras assim essa tabela acima
+            # ficaria com 12 colunas ao inves de apenas 3 como mostrado acima
+            # para cada linha ele cria uma nova coluna, usado para facilitar a visualizacao.
+        
             gather("tipo", "indicador", -date)
         
         # Criar gráfico de linhas com acumulo de casos e mortes
