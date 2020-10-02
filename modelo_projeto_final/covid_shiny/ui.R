@@ -1,4 +1,3 @@
-#
 # This is the user-interface definition of a Shiny web application. You can
 # run the application by clicking 'Run App' above.
 #
@@ -11,10 +10,9 @@ library(shiny)
 library(bs4Dash)
 library(plotly)
 
-select_city_options <- read_lines('data/city_selector.gz')
+select_city_options <- readLines('data/city_selector.gz')
 
 # Define UI for application that draws a histogram
-
 
 bs4DashPage(
     fluidPage(
@@ -28,7 +26,6 @@ bs4DashPage(
                                choices = select_city_options)
             )
         ),
-        
         fluidRow(
             column(12,
                    h2('Evolução por dia, total de casos e óbitos por COVID-19'),

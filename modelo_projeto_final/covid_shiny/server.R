@@ -9,11 +9,14 @@
 
 library(shiny)
 library(dplyr)
+library(readr)
 library(ggplot2)
 library(plotly)
 library(scales)
 
-covid19 <- fetch_data_brasil_io(use_cached_data = TRUE)
+source("helpers/utils.R")
+
+covid19 <- fetchDataBrasilIo(use_cached_data = TRUE)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {

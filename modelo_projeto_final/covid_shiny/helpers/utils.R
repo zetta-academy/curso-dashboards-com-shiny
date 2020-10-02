@@ -1,6 +1,7 @@
 # Funções adicionais para executar o aplicativo Shiny
-library(tidyverse)
-library(slider)
+
+library(tidyverse)  # Data manipulation
+library(slider)     # Rolling average
 
 
 preProcessCovidData <- function(data) {
@@ -10,13 +11,10 @@ preProcessCovidData <- function(data) {
       filter(place_type == 'city' & 
                !is.na(city)) %>% 
       arrange(date) %>% 
-      mutate(selector = city, ' - ', state, ' (', city_ibge_code, ')') %>%
+      mutate(selector = paste0(city, ' - ', state, ' (', city_ibge_code, ')')) %>%
       group_by(city_ibge_code) %>%
-      mutate(confirmed_n = new_confirmed - lag(new_confirmed)) %>%
-      mutate(confirmed_n = ifelse(date == min(date), new_confirmed, confirmed_n)) %>% 
-      fill(confirmed_n, .direction = 'up') %>% 
-      mutate(rolling_avg7d = slider::slide_dbl(confirmed_n, mean, .before = 7, .after = 0)) %>% 
-      mutate(confirmed_n = ifelse(confirmed_n < 0, 0, confirmed_n)) %>% 
+      mutate(rolling_avg7d = slider::slide_dbl(new_confirmed, mean, .before = 7, .after = 0)) %>% 
+      mutate(confirmed_n = ifelse(new_confirmed < 0, 0, new_confirmed)) %>% 
       ungroup() %>% 
       as_tibble() %>% 
       select(-city, -city_ibge_code, -epidemiological_week,
