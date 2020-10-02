@@ -24,12 +24,12 @@ bs4DashPage(
         # Titulo da pagina
         fluidRow(
             column(12,
-                   # Controladores
-                   selectInput("choose_city", 
-                               "Selecione uma cidade",
+                   # Controladores / filtros 
+                   selectInput(inputId = "escolher_cidade", 
+                               label = "Selecione uma cidade",
                                choices = select_city_options)
             )
-        ),
+        ),# aqui nessa parte é necessario mencionar um pouco de bootstrap, visto que não são todos com esse conhecimento
         fluidRow(
             column(12,
                    h2('Evolução por dia, total de casos e óbitos por COVID-19'),
