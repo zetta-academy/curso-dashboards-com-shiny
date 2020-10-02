@@ -12,12 +12,12 @@ library(plotly)
 
 select_city_options <- readLines('data/city_selector.gz')
 
-# Define UI for application that draws a histogram
+# Definir a interface do usuário da Dashboard
 
 bs4DashPage(
     title = 'COVID 19 AGORA',
     bs4DashNavbar(
-        skin = "dark",
+        skin = 'dark',
         compact = TRUE
     ),
     bs4DashBody(
