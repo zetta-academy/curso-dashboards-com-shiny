@@ -21,34 +21,31 @@ bs4DashPage(
         compact = TRUE
     ),
     bs4DashBody(
-        fluidPage(
-            # Titulo da pagina
-            fluidRow(
-                column(12,
-                       # Controladores
-                       selectInput("choose_city", 
-                                   "Selecione uma cidade",
-                                   choices = select_city_options)
-                )
-            ),
-            fluidRow(
-                column(12,
-                       h2('Evolução por dia, total de casos e óbitos por COVID-19'),
-                       # Casos e mortes acumulados
-                       plotlyOutput("distPlot")
-                )
-            ),
-            fluidRow(
-                # Gráfico 2
-            ),
-            fluidRow(
-                # Mapa
-            ),
-            fluidRow(
-                # Tabela
+        # Titulo da pagina
+        fluidRow(
+            column(12,
+                   # Controladores
+                   selectInput("choose_city", 
+                               "Selecione uma cidade",
+                               choices = select_city_options)
             )
-            
         ),
-        bs4DashFooter(),
-    )
+        fluidRow(
+            column(12,
+                   h2('Evolução por dia, total de casos e óbitos por COVID-19'),
+                   # Casos e mortes acumulados
+                   plotlyOutput("distPlot")
+            )
+        ),
+        fluidRow(
+            # Gráfico 2
+        ),
+        fluidRow(
+            # Mapa
+        ),
+        fluidRow(
+            # Tabela
+        )
+    ),
+    bs4DashFooter(),
 )
