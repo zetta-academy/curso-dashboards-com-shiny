@@ -15,31 +15,40 @@ select_city_options <- readLines('data/city_selector.gz')
 # Define UI for application that draws a histogram
 
 bs4DashPage(
-    fluidPage(
-        # Titulo da pagina
-        titlePanel('COVID 19 AGORA'),
-        fluidRow(
-            column(12,
-                   # Controladores
-                   selectInput("choose_city", 
-                               "Selecione uma cidade",
-                               choices = select_city_options)
+    title = 'COVID 19 AGORA',
+    bs4DashNavbar(
+        skin = "dark",
+        compact = TRUE
+    ),
+    bs4DashBody(
+        fluidPage(
+            # Titulo da pagina
+            fluidRow(
+                column(12,
+                       # Controladores
+                       selectInput("choose_city", 
+                                   "Selecione uma cidade",
+                                   choices = select_city_options)
+                )
+            ),
+            fluidRow(
+                column(12,
+                       h2('Evolução por dia, total de casos e óbitos por COVID-19'),
+                       # Casos e mortes acumulados
+                       plotlyOutput("distPlot")
+                )
+            ),
+            fluidRow(
+                # Gráfico 2
+            ),
+            fluidRow(
+                # Mapa
+            ),
+            fluidRow(
+                # Tabela
             )
+            
         ),
-        fluidRow(
-            column(12,
-                   h2('Evolução por dia, total de casos e óbitos por COVID-19'),
-                   # Casos e mortes acumulados
-                   plotlyOutput("distPlot")
-            )
-        ),
-        fluidRow(
-            # Gráfico 2
-        ),
-        fluidRow(
-            # Mapa
-        ),
-        fluidRow(
-            # Tabela
-        )
-    ))
+        bs4DashFooter(),
+    )
+)
