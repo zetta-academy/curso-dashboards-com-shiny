@@ -1,7 +1,8 @@
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
+
+# Esta é a interface grafica (frontend) da aplicacao Shiny. Voce pode
+# executar esta aplicacao ao clicar em "Run App" acima.
 #
-# Find out more about building applications with Shiny here:
+# Saiba mais sobre construir aplicacoes shiny em:
 #
 #    http://shiny.rstudio.com/
 #
@@ -10,42 +11,130 @@ library(shiny)
 library(bs4Dash)
 library(plotly)
 
-select_city_options <- readLines('data/city_selector.gz')
+filtro_opcoes_cidades <- readLines("data/city_selector.gz")
 
 # Definir a interface do usuário da Dashboard
 
 bs4DashPage(
-    title = 'COVID 19 AGORA',
-    bs4DashNavbar(
-        skin = 'dark',
-        compact = TRUE
+  loading_background = "#000000",
+  enable_preloader = TRUE, # Barra de carregamento
+  sidebar_mini = TRUE,
+  sidebar_collapsed = TRUE,
+  bs4DashSidebar(
+    skin = "light",
+    status = "primary",
+    title = "Zetta",
+    elevation = 3,
+    opacity = 0.8,
+    bs4SidebarMenu(
+      bs4SidebarHeader("Header 1"),
+      bs4SidebarMenuItem(
+        "Mapa Região",
+        tabName = "item1",
+        icon = "map-marker"
+      ),
+      bs4SidebarMenuItem(
+        "Estatísticas",
+        tabName = "item2",
+        icon = "id-card"
+      )
+    )
+  ),
+  bs4DashNavbar(
+    skin = "light",
+    status = "white",
+    compact = TRUE,
+    border = FALSE
+  ),
+  bs4DashBody(
+    fluidRow(
+      br(),
+      selectInput(inputId = "escolher_cidade", 
+                  label = "Selecione uma cidade",
+                  choices = filtro_opcoes_cidades)
     ),
-    bs4DashBody(
-        # Titulo da pagina
-        fluidRow(
-            column(12,
-                   # Controladores / filtros 
-                   selectInput(inputId = "escolher_cidade", 
-                               label = "Selecione uma cidade",
-                               choices = select_city_options)
+    fluidRow(
+      box(title = h1("São Paulo"), 
+          width = 12,
+          collapsible = FALSE,
+          overflow = TRUE,
+          fluidRow(
+            bs4ValueBox(
+              value = h1(3),
+              subtitle = "Casos na últimas 24h",
+              elevation = 1,
+              status = "white",
+              icon = "user-friends",
+              footer = ""
+            ),
+            bs4ValueBox(
+              value = h1(3),
+              subtitle = "Total de casos",
+              elevation = 1,
+              status = "white",
+              icon = "users",
+              footer = ""
+            ),
+            bs4ValueBox(
+              value = h1(3),
+              subtitle = "Total de mortes",
+              elevation = 1,
+              status = "white",
+              footer = ""
+            ),
+            bs4ValueBox(
+              value = h1(3),
+              subtitle = "Número de reprodução",
+              elevation = 1,
+              status = "primary",
+              icon = "registered",
+              footer = ""
             )
-        ),# aqui nessa parte é necessario mencionar um pouco de bootstrap, visto que não são todos com esse conhecimento
+          )
+      )
+    ),
+    bs4TabItems(
+      bs4TabItem(
+        tabName = "item1",
         fluidRow(
-            column(12,
-                   h2('Evolução por dia, total de casos e óbitos por COVID-19'),
-                   # Casos e mortes acumulados
-                   plotlyOutput("distPlot")
+          bs4Box(width = 12,
+                 title = "Mapa",
+                 leafletOutput("map")
+          )
+        ),
+        bs4Box(
+          title = "Número de casos e mortes",
+          width = 12,
+          bs4TabCard(
+            id = "graficos_casos",
+            title = "",
+            width = 12,
+            closable = FALSE,
+            collapsible = FALSE,
+            bs4TabPanel(
+              tabName = "Casos",
+              h1("Casos Acumulados"),
+              plotlyOutput("casosAcumulados")
+            ),
+            bs4TabPanel(
+              tabName = "Média Móvel",
+              h1("Média Móvel"),
+              plotlyOutput("mediaMovel")
+            ),
+            bs4TabPanel(
+              tabName = "Óbitos",
+              h1("Óbitos"),
+              plotlyOutput("obitos")
             )
-        ),
-        fluidRow(
-            # Gráfico 2
-        ),
-        fluidRow(
-            # Mapa
-        ),
-        fluidRow(
-            # Tabela
+          )
         )
-    ),
-    bs4DashFooter(),
+      ),
+      bs4TabItem(
+        tabName = "item2",
+      )
+    )
+  ),
+  bs4DashFooter("Zetta Health Analytics", 
+                copyrights = "©",
+                right_text = "2021"),
 )
