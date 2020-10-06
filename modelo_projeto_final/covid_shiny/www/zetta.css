@@ -1,0 +1,21 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.brand-link {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#input-selector {
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  text-transform: uppercase;
+}
+
+.card {
+  -webkit-box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  box-shadow: none!important;
+}
