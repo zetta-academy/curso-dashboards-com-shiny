@@ -1,4 +1,4 @@
-
+# IMPORTANTE - Lembre-se de configurar seu diretório de trabalho (setwd())
 # Esta é a interface grafica (frontend) da aplicacao Shiny. Voce pode
 # executar esta aplicacao ao clicar em "Run App" acima.
 #
@@ -14,7 +14,8 @@ library(leaflet)
 library(fresh)
 
 # Filtro de opções das cidades
-filtro_opcoes_cidades <- readLines("data/city_selector.gz")
+filtro_opcoes_cidades <- readLines("data/city_selector.gz", 
+                                   encoding = "utf-8")
 
 
 # Definir tema
@@ -96,6 +97,7 @@ bs4DashPage(
                selectInput(inputId = "escolher_cidade", 
                            label = "Selecione uma cidade",
                            choices = filtro_opcoes_cidades)
+
       )
     ),
     fluidRow(

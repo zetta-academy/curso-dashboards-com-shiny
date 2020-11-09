@@ -1,4 +1,4 @@
-#
+# IMPORTANTE - Lembre-se de configurar seu diretório de trabalho (setwd())
 # Este arquivo contem a logica da aplicacao web. Voce pode executar a
 # a aplicacao ao clicar em 'Run App' acima.
 #
@@ -30,7 +30,7 @@ geodata <- read_csv("data/base_geolocalizacao_br.csv")
 shinyServer(function(input, output) {
     
     # Nome da cidade
-    output$nome_cidade <- renderText({
+        output$nome_cidade <- renderText({
         city_selector <- input$escolher_cidade
         city_name <- gsub("\\d+|\\(|\\)|[\\s]+$",
                           replacement = "",

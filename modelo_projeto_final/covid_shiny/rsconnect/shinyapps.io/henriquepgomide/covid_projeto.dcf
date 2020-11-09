@@ -1,0 +1,12 @@
+name: covid_projeto
+title: covid_projeto
+username:
+account: henriquepgomide
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2955917
+bundleId: 3709362
+url: https://henriquepgomide.shinyapps.io/covid_projeto/
+when: 1602003346.1467
+asMultiple: FALSE
+asStatic: FALSE
