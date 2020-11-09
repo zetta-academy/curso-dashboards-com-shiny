@@ -1,6 +1,6 @@
-![Logotipo Zetta](https://raw.githubusercontent.com/zetta-health/exp-curso-python-saude/master/assets/zetta-exp-logo.jpg)
+![Logotipo Zetta Academy](https://raw.githubusercontent.com/zetta-health/curso-dashboards-com-shiny/master/assets/repository-course-social-preview.png)
 
-# Curso - Dashboard Reativas com Shiny
+# Curso - Dashboard com Shiny
 
 Eleve a qualidade do seu trabalho de Health Analytics, usando Shiny - a excelente ferramenta para desenvolver dashboards.
 
