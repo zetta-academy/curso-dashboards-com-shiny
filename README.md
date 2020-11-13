@@ -112,9 +112,9 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 
 # Instrutores
 
-**Ana Flávia Souza.** Graduanda em Economia pela Universidade Federal de Viçosa e estagiária na Zetta Exponential.
+**Ana Flávia Souza.** Graduanda em Economia pela Universidade Federal de Viçosa e estagiária na Zetta Health Analytics.
 
-**Gabriel Kakizaki.** Graduando em Administração pela Universidade Federal de Viçosa e estagiário na Zetta Exponential.
+**Gabriel Kakizaki.** Graduando em Administração pela Universidade Federal de Viçosa e estagiário na Zetta Health Analytics.
 
 **Henrique Gomide, Ph.D.**  Líder do comitê científico da empresa Zetta Health e professor da Universidade Federal de Viçosa.
 
