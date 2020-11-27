@@ -57,17 +57,12 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 
 
 # Cronograma
-
-
-
-*   Início das aulas - 24/11/2020, às 19h00.
-*   Término - 22/12/2020, às 19h.
-*   Duração - 5 semanas.
+*   Início das aulas - 18/01/2020, às 19h00.
+*   Duração - 5 encontros.
 *   Número de vagas: 60.
 
 
-### 1ª semana | Introdução ao curso e suas ferramentas
-
+### 1 Encontro | Introdução ao curso e suas ferramentas
 
 
 1. Expectativas. O que este curso é?
@@ -78,14 +73,16 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
     3. Criar primeiro aplicativo em Shiny - “Hello World”.
 
 
-### 2ª semana | R para manipulação de dados e visualizações
+### 2 Encontro | R para manipulação de dados e visualizações
+
+
 1. Subprojeto - Gerar gráfico de casos acumulados de COVID-19 por cidade.
 2. Manipulação de dados:
     1. Tidyverse
     2. ggplot2 e Plotly
 
 
-### 3ª semana | Shiny - Mapas e caixas interativos
+### 3 Encontro | Shiny - Mapas e caixas interativos
 
 
 1. Subprojeto - Gerar mapa usando Leaflet
@@ -96,14 +93,14 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 4. Caixas com número de reprodução efetivo
 
 
-### 4ª semana | Customizando seu Dashboard
+### 4 Encontro | Customizando seu Dashboard
 
 1. Usando bs4Dash para customizar o template da Zetta
 2. Bootstrap;
 3. Customização: Adicionar logotipo e css.
 
 
-### 5ª semana | Apresentação do projeto final
+### 5 Encontro | Apresentação do projeto final
 
 1. Apresentação dos projetos - três projetos;
 2. Avaliação do curso;
