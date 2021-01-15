@@ -123,4 +123,4 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 
 **Henrique Gomide, Ph.D.**  Líder do comitê científico da empresa _Zetta Health Analytics_ e professor da Universidade Federal de Viçosa.
 
-**Janilson Mendes. **Especialista em Engenharia Clínica pelo Hospital Albert Einstein. Pós-graduado em Matemática Aplicada e Big Data pelo Museu da Matemática.
+**Janilson Mendes.** Especialista em Engenharia Clínica pelo Hospital Albert Einstein. Pós-graduado em Matemática Aplicada e Big Data pelo Museu da Matemática.
