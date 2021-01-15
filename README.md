@@ -1,29 +1,26 @@
 ![Logotipo Zetta Academy](https://raw.githubusercontent.com/zetta-health/curso-dashboards-com-shiny/master/assets/repository-course-social-preview.png)
 
-# Curso - Dashboard com Shiny
-
-Eleve a qualidade do seu trabalho de Health Analytics, usando Shiny - a excelente ferramenta para desenvolver dashboards.
-
-
-# Dashboards com Shiny
+# Curso Dashboards com Shiny
 
 Eleve a qualidade do seu trabalho de Health Analytics, usando Shiny - a excelente ferramenta para desenvolver dashboards.
 
 
 # Objetivos
 
-Aprenda a desenvolver Dashboards usando Shiny. Com os conhecimentos que você obterá neste curso você montará uma dashboard interativa usando recursos como gráficos, tabelas e mapas. Você poderá desenvolver suas habilidades em R usando a nova forma de escrever códigos (_tidyverse_) ou usar seu conhecimento prévio de Python.
+Desenvolva painéis interativos (dashboards) usando Shiny. Neste curso você montará um dashboard interativo usando recursos como gráficos e mapas.
 
-Palavras-chave: visualização de dados, shiny, R, tidyverse, dashboards, mapas, leaflet, API’s, ciências de dados.
+Palavras-chave: visualização de dados, shiny, R, tidyverse, dashboards, mapas, leaflet, ciências de dados.
 
 
 # Introdução
 
-Aprenda Shiny, uma ferramenta moderna, dinâmica e escalável do desenvolvimento de painéis interativos - _Dashboards_. Neste, você desenvolverá um projeto de _health analytic_s que permitirá acompanhar os casos de COVID-19 nas cidades brasileiras. 
+O Shiny é uma ferramenta dinâmica, reativa e escalável para a criação de painéis interativos - _Dashboards_. Neste curso, você desenvolverá um projeto de _health analytic_s que permitirá acompanhar os casos de COVID-19 em todos municípios do país. 
 
-Ao final do curso, você será capaz de desenvolver tabelas dinâmicas, gráficos e mapas interativos usando diversos pacotes e bibliotecas do R.
+Ao final do curso, você será capaz de desenvolver gráficos e mapas interativos usando diversos pacotes e bibliotecas do R.
 
-Neste curso, você aprenderá:
+Você aprenderá:
+
+
 
 1. Escrever código de programação usando R;
 2. Extrair e capturar dados em bancos de dados públicos de pacotes e API;
@@ -36,12 +33,12 @@ Neste curso, você aprenderá:
 
 # Conhecimentos necessários
 
-Este curso foi desenvolvimento para quem possui conhecimento intermediário. Se você consegue escrever uma função em Python e já usou Pandas, você está pronto. Conhecimentos básicos de HTML e CSS são também recomendados. Conhecimento da framework Bootstrap é um plus. 
+Este curso foi desenvolvido para quem possui conhecimento intermediário de programação. Se você já escreveu uma função em Python e já usou Pandas, você está pronto. Conhecimentos básicos de HTML e CSS são também desejáveis para customização do projeto final.
 
 
 ## Sou iniciante, posso fazer o curso?
 
-Se você for iniciante, você precisará dedicar mais horas para acompanhar este curso. Nós gravamos vídeos introdutórios e temos cientistas de dados para tirar dúvidas e acompanhar seu progresso.
+Se você for iniciante, você precisará dedicar mais horas para acompanhar este curso e usar recursos adicionais. Nós gravamos vídeos introdutórios e temos cientistas de dados para tirar dúvidas e acompanhar seu progresso nos fóruns.
 
 
 # Metodologia
@@ -50,19 +47,23 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 
 
 
-*   Aulas expositivas síncronas (1h);
+*   Aulas expositivas síncronas (50 min);
 *   Sessões de tutoria semanais com cientistas de dados;
 *   Vídeos de conteúdo no Youtube;
 *   Exercícios disponíveis no Github da Zetta.
 
 
 # Cronograma
-*   Início das aulas - 18/01/2020, às 19h00.
+
+
+
+*   Início das aulas - 25/01/2020, às 19h00.
 *   Duração - 5 encontros.
 *   Número de vagas: 60.
 
 
-### 1 Encontro | Introdução ao curso e suas ferramentas
+### 25/01/2020 | Introdução ao curso e suas ferramentas - Henrique
+
 
 
 1. Expectativas. O que este curso é?
@@ -73,46 +74,53 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
     3. Criar primeiro aplicativo em Shiny - “Hello World”.
 
 
-### 2 Encontro | R para manipulação de dados e visualizações
+### 01/02/2020 | R para manipulação de dados e visualizações - Janilson
 
 
-1. Subprojeto - Gerar gráfico de casos acumulados de COVID-19 por cidade.
+
+1. Subprojeto - Gerar gráfico de casos acumulados de COVID-19 por cidade - 15%.
 2. Manipulação de dados:
     1. Tidyverse
     2. ggplot2 e Plotly
 
 
-### 3 Encontro | Shiny - Mapas e caixas interativos
+### 08/02/2020 | Shiny - Mapas e caixas interativos - Henrique
 
 
-1. Subprojeto - Gerar mapa usando Leaflet
+
+1. Subprojeto - Gerar mapa usando Leaflet - 15%
 2. Manipulação de dados:
-    1. Conversão entre tipos
-    2. Joins
+    1. Conversão entre diferentes tipos no R
+    2. União de tabelas
 3. Mapa
+    3. Leaflet
 4. Caixas com número de reprodução efetivo
 
 
-### 4 Encontro | Customizando seu Dashboard
+### 22/02/2020 | Customizando seu Dashboard - Henrique e Janilson.
+
+
 
 1. Usando bs4Dash para customizar o template da Zetta
 2. Bootstrap;
 3. Customização: Adicionar logotipo e css.
 
 
-### 5 Encontro | Apresentação do projeto final
+### 01/03/2020 | Apresentação do projeto final - Alunos e Janilson
 
-1. Apresentação dos projetos - três projetos;
+
+
+1. Apresentação dos projetos - três projetos; 70%
 2. Avaliação do curso;
 3. Para saber mais: integração com Python, layout responsivos, autenticação, bibliotecas complementares (REST, Pacotes).
 
 
 # Instrutores
 
-**Ana Flávia Souza.** Graduanda em Economia pela Universidade Federal de Viçosa e estagiária na Zetta Health Analytics.
+**Ana Flávia Souza.** Graduanda em Economia pela Universidade Federal de Viçosa e estagiária na Zetta Exponential.
 
-**Gabriel Kakizaki.** Graduando em Administração pela Universidade Federal de Viçosa e estagiário na Zetta Health Analytics.
+**Gabriel Kakizaki.** Graduando em Administração pela Universidade Federal de Viçosa e estagiário na Zetta Exponential.
 
-**Henrique Gomide, Ph.D.**  Líder do comitê científico da empresa Zetta Health e professor da Universidade Federal de Viçosa.
+**Henrique Gomide, Ph.D.**  Líder do comitê científico da empresa _Zetta Health Analytics_ e professor da Universidade Federal de Viçosa.
 
-**Janilson Mendes**. Especialista em Engenharia Clínica pelo Hospital Albert Einstein. Pós-graduado em Matemática Aplicada e Big Data pelo Museu da Matemática
+**Janilson Mendes. **Especialista em Engenharia Clínica pelo Hospital Albert Einstein. Pós-graduado em Matemática Aplicada e Big Data pelo Museu da Matemática.
