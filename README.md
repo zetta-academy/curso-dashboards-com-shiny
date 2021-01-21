@@ -1,6 +1,8 @@
 ![Logotipo Zetta Academy](https://raw.githubusercontent.com/zetta-health/curso-dashboards-com-shiny/master/assets/repository-course-social-preview.png)
 
+
 # Curso Dashboards com Shiny
+
 
 Eleve a qualidade do seu trabalho de Health Analytics, usando Shiny - a excelente ferramenta para desenvolver dashboards.
 
@@ -38,7 +40,7 @@ Este curso foi desenvolvido para quem possui conhecimento intermediário de prog
 
 ## Sou iniciante, posso fazer o curso?
 
-Se você for iniciante, você precisará dedicar mais horas para acompanhar este curso e usar recursos adicionais. Nós gravamos vídeos introdutórios e temos cientistas de dados para tirar dúvidas e acompanhar seu progresso nos fóruns.
+Se você for iniciante, você precisará dedicar mais horas para acompanhar este curso e usar recursos adicionais para conseguir acompanhá-lo. Nós gravamos vídeos introdutórios e temos cientistas de dados para tirar dúvidas e acompanhar seu progresso nos fóruns.
 
 
 # Metodologia
@@ -57,12 +59,12 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 
 
 
-*   Início das aulas - 25/01/2020, às 19h00.
+*   Início das aulas - 01/02/2020, às 19h00.
 *   Duração - 5 encontros.
 *   Número de vagas: 60.
 
 
-### 25/01/2020 | Introdução ao curso e suas ferramentas - Henrique
+### 01/02/2020 | Introdução ao curso e suas ferramentas - Henrique
 
 
 
@@ -74,17 +76,17 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
     3. Criar primeiro aplicativo em Shiny - “Hello World”.
 
 
-### 01/02/2020 | R para manipulação de dados e visualizações - Janilson
+### 08/02/2020 | R para manipulação de dados e visualizações - Janilson
 
 
 
-1. Subprojeto - Gerar gráfico de casos acumulados de COVID-19 por cidade - 15%.
+1. Subprojeto - Gerar gráfico de casos acumulados e média móvel de COVID-19 por cidade - 15%.
 2. Manipulação de dados:
     1. Tidyverse
     2. ggplot2 e Plotly
 
 
-### 08/02/2020 | Shiny - Mapas e caixas interativos - Henrique
+### 22/02/2020| Shiny - Mapas e caixas interativos - Henrique
 
 
 
@@ -97,7 +99,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 4. Caixas com número de reprodução efetivo
 
 
-### 22/02/2020 | Customizando seu Dashboard - Henrique e Janilson.
+### 01/03/2020 | Customizando seu Dashboard - Henrique e Janilson.
 
 
 
@@ -106,7 +108,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 3. Customização: Adicionar logotipo e css.
 
 
-### 01/03/2020 | Apresentação do projeto final - Alunos e Janilson
+### 08/03/2020 | Apresentação do projeto final - Alunos e Janilson
 
 
 
@@ -115,12 +117,18 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 3. Para saber mais: integração com Python, layout responsivos, autenticação, bibliotecas complementares (REST, Pacotes).
 
 
+# Recursos
+
+Github do curso
+*   https://github.com/zetta-academy/curso-dashboards-com-shiny
+
+
 # Instrutores
 
-**Ana Flávia Souza.** Graduanda em Economia pela Universidade Federal de Viçosa e estagiária na Zetta Exponential.
+**Ana Flávia Souza.** Tutora. Cientista de dados com certificação IBM Data Science Certification. Estagiária na Zetta Academy e graduanda em Ciências Econômicas pela Universidade Federal de Viçosa. 
 
-**Gabriel Kakizaki.** Graduando em Administração pela Universidade Federal de Viçosa e estagiário na Zetta Exponential.
+**Gabriel Kakizaki.** Tutor. Cientista de dados com certificação IBM Data Science Certification. Estagiário na Zetta Academy e graduando em Administração pela Universidade Federal de Viçosa.
 
-**Henrique Gomide, Ph.D.**  Líder do comitê científico da empresa _Zetta Health Analytics_ e professor da Universidade Federal de Viçosa.
+**Henrique Gomide, Ph.D.**  Professor. Líder do comitê científico da empresa _Zetta Health Analytics_ e professor da Universidade Federal de Viçosa.   
 
-**Janilson Mendes.** Especialista em Engenharia Clínica pelo Hospital Albert Einstein. Pós-graduado em Matemática Aplicada e Big Data pelo Museu da Matemática.
+**Janilson Mendes.** Professor. Especialista em Engenharia Clínica pelo Hospital Albert Einstein. Pós-graduado em Matemática Aplicada e Big Data pelo Museu da Matemática.
