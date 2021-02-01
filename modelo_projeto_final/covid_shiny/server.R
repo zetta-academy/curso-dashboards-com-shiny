@@ -18,8 +18,16 @@ library(rgdal)    # Manipula dados de formatos geográficos
 library(leaflet)  # Plota mapas
 
 
+
 # Carrega funcoes adicionais para obter dados de API, estimar o numero de 
 # reproducao
+# --------------------------------------------------------
+# A funcao source serve para carregar um arquivo com funcoes
+#
+# Carregar funcoes adicionais para obter dados de API, 
+# estimar o numero de reproducao
+#
+# -------------------------------------------------------
 source("helpers/utils.R")
     
 
@@ -28,7 +36,15 @@ covid19 <- fetch_data_brasil_io(use_cached_data = FALSE)
 geodata <- read_csv("data/base_geolocalizacao_br.csv")
 
 
+# --------------------------------------------------------
+# Funcao para leitura de dados
+# --------------------------------------------------------
+geodata <- read_csv("data/base_geolocalizacao_br.csv")
+
+# -------------------------------------------------------
 # Define a logica de programacao para gerar o grafico 1
+# -------------------------------------------------------
+
 shinyServer(function(input, output) {
     # Retorna o nome da cidade
         output$nome_cidade <- renderText({
