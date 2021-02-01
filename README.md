@@ -3,6 +3,7 @@
 
 # Curso Dashboards com Shiny
 
+[[https://github.com/zetta-academy/curso-dashboards-com-shiny](https://github.com/zetta-academy/curso-dashboards-com-shiny)]
 
 Eleve a qualidade do seu trabalho de Health Analytics, usando Shiny - a excelente ferramenta para desenvolver dashboards.
 
@@ -64,7 +65,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 *   Número de vagas: 60.
 
 
-### 01/02/2020 | Introdução ao curso e suas ferramentas - Henrique
+### 01/02/2020 | Introdução ao curso e suas ferramentas [[Playlist](https://youtu.be/chpo2HYVFQI)] [[Slides](https://docs.google.com/presentation/u/0/d/1G0Jl8hAATv0VIqC949WXjBiokDZKrRI5Vto8sQBAjr0/edit)]
 
 
 
@@ -73,7 +74,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 3. Conheça as ferramentas do curso: 
     1. Instalar R e RStudio;
     2. Instalar pacotes do R;
-    3. Criar primeiro aplicativo em Shiny - “Hello World”.
+    3. Criar primeiro aplicativo em Shiny - “Olá Shiny”.
 
 
 ### 08/02/2020 | R para manipulação de dados e visualizações - Janilson
@@ -120,7 +121,10 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 # Recursos
 
 Github do curso
-*   https://github.com/zetta-academy/curso-dashboards-com-shiny
+
+
+
+*   [https://github.com/zetta-academy/curso-dashboards-com-shiny](https://github.com/zetta-academy/curso-dashboards-com-shiny)
 
 
 # Instrutores
@@ -131,4 +135,4 @@ Github do curso
 
 **Henrique Gomide, Ph.D.**  Professor. Líder do comitê científico da empresa _Zetta Health Analytics_ e professor da Universidade Federal de Viçosa.   
 
-**Janilson Mendes.** Professor. Especialista em Engenharia Clínica pelo Hospital Albert Einstein. Pós-graduado em Matemática Aplicada e Big Data pelo Museu da Matemática.
+**Janilson Mendes. Professor.** Especialista em Engenharia Clínica pelo Hospital Albert Einstein. Pós-graduado em Matemática Aplicada e Big Data pelo Museu da Matemática.
