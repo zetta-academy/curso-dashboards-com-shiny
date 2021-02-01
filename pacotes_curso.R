@@ -1,3 +1,8 @@
+# Zetta Health Academy - Curso Dashboards com Shiny
+# URL: https://github.com/zetta-academy/curso-dashboards-com-shiny
+# Direitos reservados
+# Autor: Henrique Gomide, Ph.D.
+
 # Pacotes para curso R
 # Lembre-se. A Versão esperada do seu R é a 4.x.
 

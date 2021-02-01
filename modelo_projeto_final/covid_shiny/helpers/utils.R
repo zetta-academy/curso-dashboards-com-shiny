@@ -1,13 +1,18 @@
+# Zetta Health Academy - Curso Dashboards com Shiny
+# URL: https://github.com/zetta-academy/curso-dashboards-com-shiny
+# Direitos reservados
+# Autor: Henrique Gomide, Ph.D.
+
 # Funções adicionais para executar o aplicativo Shiny
 
-library(tidyverse)  # Data manipulation
-library(slider)     # Rolling average
-
+library(tidyverse)
+library(slider)
 library(distcrete)
 library(epitrix)
 library(incidence)
 library(projections)
 library(EpiEstim)
+
 
 # Preparar os dados
 pre_process_covid_data <- function(data){
@@ -79,7 +84,7 @@ get_growth_estimates <- function(data,
   #     SI: https://www.nejm.org/doi/full/10.1056/NEJMoa2001316
   #     SI Updated: https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article
   # Function parameters:
-  #     data   - data frame from wcota/covid19br repo
+  #     data   - data.frame
   #     mu     - mean serial interval  
   #     sigma  - sd of serial interval 
   #     n_criteria_days - number of days after the incidence peak
@@ -142,7 +147,6 @@ predict_covid19_cases <- function(data_original) {
     dplyr::select(UF, date_f, CasosNovos) %>% 
     ungroup()
   names(data) <- c("state", "date", "newCases")
-  
   
   state_vector <- unique(data$state)
   list_of_results <- list()
@@ -265,4 +269,3 @@ colorize_infovalue <- function(value){
     return("light")
   }
 }
-

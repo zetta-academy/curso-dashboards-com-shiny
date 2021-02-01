@@ -1,35 +1,36 @@
+# Zetta Health Academy - Curso Dashboards com Shiny
+# URL: https://github.com/zetta-academy/curso-dashboards-com-shiny
+# Direitos reservados
+# Autor: Henrique Gomide, Ph.D.
+
 # IMPORTANTE - Lembre-se de configurar seu diretório de trabalho (setwd())
 # Este arquivo contem a logica da aplicacao web. Voce pode executar a
 # a aplicacao ao clicar em 'Run App' acima.
-#
-# Saiba mais sobre construir aplicacoes shiny em:
-#
-#    http://shiny.rstudio.com/
-#
 
-# Carregar pacotes do R para o arquivo do servidor
-library(shiny)
-library(dplyr)
-library(readr)
-library(ggplot2)
-library(plotly)
-library(scales)
-library(rgdal)
-library(leaflet)
+# Carrega pacotes do R para o arquivo do servidor
+library(shiny)    # Dashboards
+library(dplyr)    # Manipulação de dados
+library(readr)    # Leitura dos dados
+library(ggplot2)  # Gráficos
+library(plotly)   # Acesso a visualizações interativas
+library(scales)   # Manipula e formata eixos dos gráficos
+library(rgdal)    # Manipula dados de formatos geográficos
+library(leaflet)  # Plota mapas
 
 
-# Carregar funcoes adicionais para obter dados de API, estimar o numero de 
+# Carrega funcoes adicionais para obter dados de API, estimar o numero de 
 # reproducao
 source("helpers/utils.R")
+    
 
-covid19 <- fetch_data_brasil_io(use_cached_data = TRUE)
+# Carrega banco de dados da API do Brasil IO
+covid19 <- fetch_data_brasil_io(use_cached_data = FALSE)
 geodata <- read_csv("data/base_geolocalizacao_br.csv")
 
-# Define a logica de programacao para gerar o grafico 1
 
+# Define a logica de programacao para gerar o grafico 1
 shinyServer(function(input, output) {
-    
-    # Nome da cidade
+    # Retorna o nome da cidade
         output$nome_cidade <- renderText({
         city_selector <- input$escolher_cidade
         city_name <- gsub("\\d+|\\(|\\)|[\\s]+$",
@@ -41,7 +42,6 @@ shinyServer(function(input, output) {
     # 0. Value Boxes ----
     # 0.1 Numero de casos nas ultimas 24h
     output$casos_ultimas_24h <- renderbs4ValueBox({
-        
         city_selector <- input$escolher_cidade
         citycode <- as.integer(str_extract(city_selector, "\\d+"))
         
@@ -64,7 +64,7 @@ shinyServer(function(input, output) {
     })
     
     
-    # 0.2. Casos total
+    # 0.2. Box Value -  Casos total
     output$casos_total <- renderbs4ValueBox({
         
         city_selector <- input$escolher_cidade
@@ -88,8 +88,7 @@ shinyServer(function(input, output) {
         )
     })
     
-    
-    # 0.3. Mortes
+    # 0.3. Box value - Mortes
     output$mortes <- renderbs4ValueBox({
         
         city_selector <- input$escolher_cidade
@@ -113,7 +112,7 @@ shinyServer(function(input, output) {
     })
         
     
-    # 0.4. Numero de reproducao efetivo
+    # 0.4. Box value - Numero de reproducao efetivo
     output$n_reproducao <- renderbs4ValueBox({
         
         city_selector <- input$escolher_cidade
@@ -133,7 +132,7 @@ shinyServer(function(input, output) {
         lowerR <- meanR - 2*sd(estimates[[2]])
         higherR <- meanR + 2*sd(estimates[[2]]) 
         
-        bs4ValueBox(
+            bs4ValueBox(
             value = h1(formatC(meanR, 
                                digits = 2,
                                big.mark = ".",
@@ -149,22 +148,23 @@ shinyServer(function(input, output) {
                        )),
             subtitle = "R efetivo (IC95%)" ,
             icon = "registered",
-            status = colorize_infovalue(meanR),
+            status = colorize_infovalue(meanR), # Modifica cores da caixa
             elevation = 1,
             footer = ""
         )
     })
-        
     
     
     # 1. Painel Mapa ----
     # 1.1 Map
     output$map <- renderLeaflet({
-        # Definir paleta
+        # Define paleta
         pal <- colorNumeric("viridis", NULL)
         
+        # Acessa cidade selecionada na UI 
         city_selector <- input$escolher_cidade
         
+        # Seleciona apenas números das cidades usando expressão regular
         citycode <- as.integer(str_extract(city_selector, "\\d+"))
         
         state_subset <- 
@@ -243,6 +243,7 @@ shinyServer(function(input, output) {
             scale_x_date(date_breaks = "1 month", 
                          date_labels = "%m/%y")
         
+        # Plota gráfico interativo usando plotly
         ggplotly(ggchart_01)
         
     })
@@ -298,45 +299,3 @@ shinyServer(function(input, output) {
     })
     
 })
-
-
-# Comments #####
-# Painel 2
-#        # Criar banco de dados com cidade
-#        city_selector    <- input$escolher_cidade
-#        city_data <- 
-#            covid19 %>% 
-#            # aqui aplica a selecao do usuario para a construcao do grafico 
-#            filter(selector == city_selector) %>% 
-#            #aqui seleciona as colunas para apresentacao no grafico 
-#            select(date, last_available_confirmed, last_available_deaths, 
-#                   rolling_avg7d) %>% 
-#            # essa funcao gather serve para fazer a transposicao dos dados, invertendo linhas para colunas e vice-versa
-#            # exemplo
-#            #-----------------------------------------------
-#            # codigo produto | descricao produto | preco 
-#            #-----------------------------------------------
-#            # ban001         | banana            | 1.00
-#            # lar001         | laranja           | 2.00
-#            # mac001         | maca              | 1.50
-#            
-#            #usando a funcao gather ficaria assim 
-#            
-#            # ban001 | lar001 | mac001 isso para a primeira coluna, e para todas as outras assim essa tabela acima
-#            # ficaria com 12 colunas ao inves de apenas 3 como mostrado acima
-#            # para cada linha ele cria uma nova coluna, usado para facilitar a visualizacao.
-#        
-#            gather("tipo", "indicador", -date)
-#        
-#        # Criar gráfico de linhas com acumulo de casos e mortes
-#        ggchart_01 <- city_data %>% 
-#            ggplot(aes(x = date, y = indicador, colour = tipo)) +
-#            geom_line(size = 1) + 
-#            theme_minimal(base_size = 18) + 
-#            xlab('') + 
-#            ylab('') +
-#            scale_y_continuous(labels = scales::comma) +
-#            scale_x_date(date_breaks = "1 month", 
-#                         date_labels = "%m/%y")
-#        ggplotly(ggchart_01)
-
