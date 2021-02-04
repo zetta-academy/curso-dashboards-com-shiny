@@ -1,0 +1,102 @@
+---
+title: "Tipos de Operadores em R"
+author: "Ana Flávia Souza, Zetta Academy"
+output: html_document
+---
+----
+Olá! Aqui, você vai aprender sobre alguns dos tipos de operadores em R e como usá-los. Vamos começar!
+
+## Operadores Matemáticos
+
+Podemos acessar as funções de calculadora no R através dos **operadores matemáticos**. 
+
+É igual à matemática da escola. Por exemplo, em caso de uma expressão numérica, multiplicação e divisão têm prioridade sobre adição e subtração, e operações entre parênteses têm prioridade sobre o resto da expressão.
+
+Na tabela abaixo, você confere a relação entre as operações e os operadores.
+
+Operador | Operação
+--- | ---
+`+` | Adição
+`-` | Subtração
+`*` | Multiplicação
+`/` | Divisão
+`^`| Exponencial 
+`%%` | Módulo
+
+### Exemplos
+```{r}
+# Soma
+5 + 10 
+```
+
+```{r}
+# Prioridades das operações entre parênteses - Precedência de operadores
+2 * (10 + 3) 
+```
+
+```{r}
+# Exponencial
+4 ^ 2  
+```
+
+```{r}
+# O operador de módulo retorna o resto da divisão
+10 %% 3  
+```
+
+## Operadores Relacionais
+
+Os **operadores relacionais** são utilizados para estabeler comparações lógicas. Quando aplicados, o resultado é sempre verdadeiro (TRUE) ou falso (FALSE).
+
+Operador | Relação 
+--- | ---
+`==` | Igualdade
+`!=` | Diferença
+`>` | maior que 
+`<` | menor que
+`>=` | maior igual que 
+`<=` | menor igual que 
+
+### Exemplos
+
+```{r}
+10 > 7 
+```
+
+```{r}
+12 + 8 != 2 * 10
+```
+
+```{r}
+# É possível comparar variáveis.
+a <- 2
+b <- 5
+
+a == b # a igual a b
+```
+
+## Operadores Lógicos
+
+Os **operadores lógicos** servem para combinar operações de verdadeiro (True) e falso (False). No R, os operadores lógicos incluem: `&` (e), `|` (ou) e `!` (não). 
+(Aos programadores de Javascript e C++, cuidado com o uso de `&&` e `||`.)
+
+Operador | Relação | Comentário
+--- | --- | ---
+`&` | E (conjunção) | O resultado só é verdadeiro se ambas forem verdadeiras.
+`|` | OU (disjunção)| O resultado é verdadeiro se pelo menos uma for verdadeira. 
+`!` | NÃO (negação) | Retorna a operação inversa da operação inserida.
+
+
+### Exemplos
+
+```{r}
+TRUE & FALSE
+```
+
+```{r}
+# É possível combinar operadores relacionais com operadores lógicos.
+(5 <= 3) | (5 >= 5)
+```
+
+Isso conclui nossa lição. Existem ainda alguns outros operadores que não foram incluídos aqui, mas você pode conferi-los nesse [link](https://www.tutorialspoint.com/r/r_operators.htm).
+
