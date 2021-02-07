@@ -12,8 +12,12 @@ ui <- fluidPage(
   title = "Minha aplicação Shiny",
   h1("Desafio 1"),
   p("Crie uma aplicação Shiny que receba um texto como input e 
-retorne este texto como output."
+retorne este texto como output."),
+  textInput("nameInput", 
+            label = "Escreva seu nome:"),
+  textOutput("nameOutput")
 )
+
 
 
 server <- function(input, output, session) {
@@ -21,7 +25,7 @@ server <- function(input, output, session) {
   output$nameOutput <- renderText({
     # Edite as linhas abaixo #
     # Seu código aqui:
-    
+    input$nameInput
   })
 }
 
