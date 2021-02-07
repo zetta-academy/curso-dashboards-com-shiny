@@ -12,7 +12,7 @@ ui <- fluidPage(
   title = "Minha aplicação Shiny",
   h1("Desafio 1"),
   p("Crie uma aplicação Shiny que receba um texto como input e 
-# retorne este texto como output.")
+retorne este texto como output."
 )
 
 
