@@ -32,7 +32,7 @@ source("helpers/utils.R")
     
 
 # Carrega banco de dados da API do Brasil IO
-covid19 <- fetch_data_brasil_io(use_cached_data = FALSE)
+covid19 <- fetch_data_brasil_io(use_cached_data = TRUE)
 geodata <- read_csv("data/base_geolocalizacao_br.csv")
 
 
