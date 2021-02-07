@@ -65,7 +65,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 *   Número de vagas: 60.
 
 
-### 01/02/2020 | Introdução ao curso e suas ferramentas [[Playlist](https://youtu.be/chpo2HYVFQI)] [[Slides](https://docs.google.com/presentation/u/0/d/1G0Jl8hAATv0VIqC949WXjBiokDZKrRI5Vto8sQBAjr0/edit)]
+### 01/02/2020 | Introdução ao curso e suas ferramentas [[Playlist](https://www.youtube.com/watch?v=chpo2HYVFQI&list=PL7URFVinmsQb8yxvSbtDxgo4pE-vwKk2-&ab_channel=HenriqueGomide)] [[Slides](https://docs.google.com/presentation/u/0/d/1G0Jl8hAATv0VIqC949WXjBiokDZKrRI5Vto8sQBAjr0/edit)]
 
 
 
