@@ -68,7 +68,7 @@ colorize_infovalue <- function(value){
 
 # DICA: Em controle de fluxo, os operadores lógicos e relacionais são bastante
 # úteis. Para saber mais sobre esses operadores em R, rode a linha abaixo.
-# Antes de rodar, lembre-se apenas de definir a pasta "semana00_introdução_ao_r"
+# Antes de rodar, lembre-se apenas de definir a pasta "semana_01"
 # como diretório de trabalho.
 # Um arquivo html será criado nesse mesmo diretório e você poderá abri-lo no
 # seu browser.

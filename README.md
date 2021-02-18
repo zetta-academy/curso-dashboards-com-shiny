@@ -77,7 +77,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
     3. Criar primeiro aplicativo em Shiny - “Olá Shiny”.
 
 
-### 08/02/2020 | R para manipulação de dados e visualizações - Janilson
+### 08/02/2020 | R para manipulação de dados e visualizações
 
 
 
@@ -87,7 +87,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
     2. ggplot2 e Plotly
 
 
-### 22/02/2020| Shiny - Mapas e caixas interativos - Henrique
+### 22/02/2020| Shiny - Mapas e caixas interativos
 
 
 
@@ -100,7 +100,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 4. Caixas com número de reprodução efetivo
 
 
-### 01/03/2020 | Customizando seu Dashboard - Henrique e Janilson.
+### 01/03/2020 | Customizando seu Dashboard
 
 
 
@@ -109,7 +109,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 3. Customização: Adicionar logotipo e css.
 
 
-### 08/03/2020 | Apresentação do projeto final - Alunos e Janilson
+### 08/03/2020 | Apresentação do projeto final
 
 
 
