@@ -1,11 +1,12 @@
-![Logotipo Zetta Academy](https://raw.githubusercontent.com/zetta-health/curso-dashboards-com-shiny/master/assets/repository-course-social-preview.png)
+[![Logotipo Zetta Academy](https://raw.githubusercontent.com/zetta-health/curso-dashboards-com-shiny/master/assets/repository-course-social-preview.png)](https://www.youtube.com/watch?v=chpo2HYVFQI&list=PL7URFVinmsQb8yxvSbtDxgo4pE-vwKk2-&ab_channel=HenriqueGomide)
 
 
-# Curso Dashboards com Shiny
+# Curso Dashboards com Shiny 
 
-[[https://github.com/zetta-academy/curso-dashboards-com-shiny](https://github.com/zetta-academy/curso-dashboards-com-shiny)]
+[https://github.com/zetta-academy/curso-dashboards-com-shiny](https://www.youtube.com/watch?v=chpo2HYVFQI&list=PL7URFVinmsQb8yxvSbtDxgo4pE-vwKk2-&ab_channel=HenriqueGomide)
 
 Eleve a qualidade do seu trabalho de Health Analytics, usando Shiny - a excelente ferramenta para desenvolver dashboards.
+
 
 
 # Objetivos
