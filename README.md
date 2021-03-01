@@ -93,12 +93,10 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 
 
 1. Subprojeto - Gerar mapa usando Leaflet - 15%
-2. Manipulação de dados:
-    1. Conversão entre diferentes tipos no R
-    2. União de tabelas
-3. Mapa
-    3. Leaflet
-4. Caixas com número de reprodução efetivo
+2. Mapa
+    a. Leaflet
+3. Caixas com número de reprodução efetivo
+4. Número de reprodução efetivo - o que é?
 
 
 ### 08/03/2021 | Customizando seu Dashboard
@@ -134,6 +132,6 @@ Github do curso
 
 **Gabriel Kakizaki.** Tutor. Cientista de dados com certificação IBM Data Science Certification. Estagiário na Zetta Academy e graduando em Administração pela Universidade Federal de Viçosa.
 
-**Henrique Gomide, Ph.D.**  Professor. Líder do comitê científico da empresa _Zetta Health Analytics_ e professor da Universidade Federal de Viçosa.   
+**Henrique Gomide, Ph.D.**  Professor. Líder do comitê científico da empresa _Zetta Health Analytics_ e professor da Universidade Federal de Viçosa. IBM AI Engineering Professional Certificate. TensorFlow Developer.
 
 **Janilson Mendes. Professor.** Especialista em Engenharia Clínica pelo Hospital Albert Einstein. Pós-graduado em Matemática Aplicada e Big Data pelo Museu da Matemática.
