@@ -22,6 +22,7 @@ city_options <- read_lines("data/city_selector.gz")
 
 #  Definir a interface grafica da aplicacao shiny 
 shinyUI <- dashboardPage(
+    skin = "black",
     dashboardHeader(title = "Dashboards com Shiny"),
     dashboardSidebar(
     ),
