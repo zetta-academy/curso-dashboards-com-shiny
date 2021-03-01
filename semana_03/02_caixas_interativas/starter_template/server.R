@@ -10,36 +10,78 @@
 #    http://shiny.rstudio.com/
 
 library(shiny)
-library(slider)
-library(plotly)
+library(shinydashboard) # Você precisará instalar
 
-source("utils/helpers.R") # Carregar funcoes uteis
+library(tidyverse)
+library(slider)
+library(distcrete)
+library(epitrix)
+library(incidence)
+library(projections)
+library(EpiEstim)
+
+source("./utils/helpers.R") # Carregar funcoes uteis
 
 # Abrir banco de dados
-covid19 <- fetch_data_brasil_io(use_cached_data = TRUE) 
+if (!"covid19" %in% ls()){
+  covid19 <- fetch_data_brasil_io(use_cached_data = TRUE)   
+}
 
 
 # Define a logica da aplicacao 
 shinyServer(function(input, output) {
     
-    output$cityNameOuput <- renderText({
-        codigo_da_cidade <- get_city_code(input$city)
-        paste("O codigo da cidade e :", codigo_da_cidade)
-        
-    })
-
-    output$graficoMediaMovel <- renderPlotly({
-        # O que voce precisara implementar, em linhas gerais:
-        #     1. Usar o codigo da funcao para escolher os dados de determinada cidade
-        #     2. Estimar a media movel usando uma janela temporal
-        #     3. Retornar um objeto ggplotly com seu grafico criado
-        #     DESAFIO. Crie um seletor para o usuario escolher
-        #              entre a media movel de 7, 14, 30 dias
+    output$numeroCasosAcumulados <- renderInfoBox({
         codigo_da_cidade <- get_city_code(input$city)
         
-        # Editar a partir desta linha
-
+        casos_acumulados <- 
+            covid19 %>% 
+            filter(is_last, city_ibge_code == codigo_da_cidade) %>% 
+            select(last_available_confirmed)
         
+        infoBox("Casos acumulados", 
+                formatC(casos_acumulados$last_available_confirmed,
+                        digits = 12,
+                        big.mark = ".",
+                        decimal.mark = ",")
+                )
     })
-
+    
+    output$numeroCasosUltimoDia <- renderInfoBox({
+        codigo_da_cidade <- get_city_code(input$city)
+        
+        casos_ultimo_dia <- 
+            covid19 %>% 
+            filter(is_last, city_ibge_code == codigo_da_cidade) %>% 
+            select(new_confirmed)
+        
+        infoBox("Casos 24h: ", 
+                formatC(casos_ultimo_dia$new_confirmed,
+                        digits = 12,
+                        big.mark = ".",
+                        decimal.mark = ",")
+        )
+    })
+    
+    output$numeroReproEfetivo <- renderValueBox({
+        codigo_da_cidade <- get_city_code(input$city)
+        
+        data_cidade <- 
+            covid19 %>% 
+            filter(city_ibge_code == codigo_da_cidade) %>% 
+            select(new_confirmed, date, city_ibge_code) 
+        
+        r_eff <-get_growth_estimates(data_cidade)
+        mean_reff <- mean(r_eff[[2]])
+        
+        valueBox(
+            value = formatC(mean_reff,
+                    digits = 3,
+                    big.mark = ".",
+                    decimal.mark = ","),
+            subtitle = "Número de Reprodução Efetivo",
+            icon = icon("registered"),
+            color = colorize_info(mean_reff)
+        )
+    })
 })

@@ -9,31 +9,37 @@
 # Recomendamos que busque mais informacoes sobre o shiny neste link:
 #    http://shiny.rstudio.com/
 
+# Você precisará instalar este pacote
+# Documentação https://rstudio.github.io/shinydashboard/structure.html 
+library(shinydashboard) # Você precisará instalar este pacote
 
 library(shiny)
+
+
 # Carrega a lista de cidades
 city_options <- read_lines("data/city_selector.gz")
 
 
 #  Definir a interface grafica da aplicacao shiny 
-shinyUI(fluidPage(
-
-    # Titulo da aplicacao
-    titlePanel("Curso Shiny - Grafico Media Movel"),
-
-    # Barra lateral com seletor de cidade 
-    sidebarLayout(
-        sidebarPanel(
-            selectInput("city",
-                        label = "Selecione uma cidade", 
-                        choices = city_options,
-                        selected = city_options[0])
+shinyUI <- dashboardPage(
+    dashboardHeader(title = "Dashboards com Shiny"),
+    dashboardSidebar(
+    ),
+    dashboardBody(
+        fluidRow(
+            box(
+                title = "Cidade: ",
+                selectInput("city",
+                            label = "Selecione uma cidade", 
+                            choices = city_options,
+                            selected = city_options[0]),
+            )
         ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-            textOutput("cityNameOuput"),
-            plotlyOutput("graficoMediaMovel")
+        fluidRow(
+            infoBoxOutput("numeroCasosAcumulados"),
+            infoBoxOutput("numeroCasosUltimoDia"),
+            valueBoxOutput("numeroReproEfetivo")
+            
         )
     )
-))
+)

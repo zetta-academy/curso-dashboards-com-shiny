@@ -2,7 +2,7 @@
 # URL: https://github.com/zetta-academy/curso-dashboards-com-shiny
 # Autora: Ana Flávia Souza, UFV
 
-# Rode a linha abaixo para importar a biblioteca
+# Execute a linha abaixo para importar a biblioteca
 library(rmarkdown)
 
 # Funções -----------------------------------------------------------------
@@ -11,6 +11,7 @@ library(rmarkdown)
 # dentro dos parênteses.
 # Para ler mais sobre funções, veja
 # https://www.tutorialspoint.com/r/r_functions.htm
+
 minha_primeira_funcao <- function(nome = "Ana") {
   paste("Nome:", nome)
 }
@@ -22,13 +23,17 @@ minha_primeira_funcao <- function(nome = "Ana") {
 
 # EXERCÍCIO 1: Crie uma função que adicione 10 unidades a um valor inputado.
 # Dica: lembre-se das {} para indentar o código da função.
-soma_dez <-
+soma_dez <- function(numero) {
+  numero + 10
+}
+
+soma_dez(0)
 
 
 
 # Outros exemplos de funções para análise de dados
 # Rode as linhas abaixo, uma a uma.
-qis <- rnorm(1000, 100, 10)
+qis <- rnorm(n = 1000, mean =  100, sd = 10)
 summary(qis)
 hist(qis)
 boxplot(qis)
@@ -38,10 +43,10 @@ boxplot(qis)
 # Com os controles de fluxo if, else e else if, podemos criar condições para
 # rodar nosso código.
 
-valor <-        # atribua TRUE ou FALSE para a variável "valor"
+valor <- FALSE       # atribua TRUE ou FALSE para a variável "valor"
 
 
-if (valor) {
+if (valor == TRUE) {
   print("Uma verdade: Shiny é uma excelente ferramenta.")
 } else {
   print("Uma mentira: aprender Shiny é difícil.")
@@ -52,13 +57,14 @@ if (valor) {
 # estrutura e tente entender qual é a sua funcionalidade.
 colorize_infovalue <- function(value){
   if (value > 1.2) {
-    return("danger")
+    "danger"
   } else if (value > 0.9) {
-    return("primary")
+    "primary"
   } else {
-    return("light")
+    "light"
   }
 }
+
 
 # DICA: Em controle de fluxo, os operadores lógicos e relacionais são bastante
 # úteis. Para saber mais sobre esses operadores em R, rode a linha abaixo.

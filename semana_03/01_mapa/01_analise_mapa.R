@@ -27,10 +27,10 @@ library(rgdal)     # Abrir e manipular shapefiles
 # OBS: Pode demorar um pouco dependendo de sua conexao
 covid19 <- read_csv("https://data.brasil.io/dataset/covid19/caso_full.csv.gz") 
 geolocalizacao <- read_csv("starter_template/data/base_geolocalizacao_br.csv")
+# Lembre-se de verificar
 
 
-# Parte A -----------------------------------------------------------------
-
+# Análise exploratória ----------------------------------------------------
 # Encontrar código de SP, cidade
 amostra <- covid19[sample(nrow(covid19), 10E4, replace = FALSE), 
                    c("city", "city_ibge_code")]
