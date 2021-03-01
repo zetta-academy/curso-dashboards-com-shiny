@@ -80,7 +80,7 @@ summary(sp_data_min)
 sp_data_min %>% 
   select(date, new_confirmed, new_deaths) %>% 
   pivot_longer(-date) %>% 
-  ggplot(aes(x = date, y = value)) +
+  ggplot(aes(x = date,y  = value)) +
   geom_line() + 
   facet_wrap(~ name, scales = "free")
 

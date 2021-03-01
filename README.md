@@ -66,7 +66,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 *   Número de vagas: 60.
 
 
-### 01/02/2020 | Introdução ao curso e suas ferramentas [[Playlist](https://www.youtube.com/watch?v=chpo2HYVFQI&list=PL7URFVinmsQb8yxvSbtDxgo4pE-vwKk2-&ab_channel=HenriqueGomide)] [[Slides](https://docs.google.com/presentation/u/0/d/1G0Jl8hAATv0VIqC949WXjBiokDZKrRI5Vto8sQBAjr0/edit)]
+### 01/02/2021 | Introdução ao curso e suas ferramentas [[Playlist](https://www.youtube.com/watch?v=chpo2HYVFQI&list=PL7URFVinmsQb8yxvSbtDxgo4pE-vwKk2-&ab_channel=HenriqueGomide)] [[Slides](https://docs.google.com/presentation/u/0/d/1G0Jl8hAATv0VIqC949WXjBiokDZKrRI5Vto8sQBAjr0/edit)]
 
 
 
@@ -78,7 +78,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
     3. Criar primeiro aplicativo em Shiny - “Olá Shiny”.
 
 
-### 08/02/2020 | R para manipulação de dados e visualizações
+### 22/02/2021 | R para manipulação de dados e visualizações
 
 
 
@@ -88,7 +88,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
     2. ggplot2 e Plotly
 
 
-### 22/02/2020| Shiny - Mapas e caixas interativos
+### 01/03/2021| Shiny - Mapas e caixas interativos
 
 
 
@@ -101,7 +101,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 4. Caixas com número de reprodução efetivo
 
 
-### 01/03/2020 | Customizando seu Dashboard
+### 08/03/2021 | Customizando seu Dashboard
 
 
 
@@ -110,7 +110,7 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 3. Customização: Adicionar logotipo e css.
 
 
-### 08/03/2020 | Apresentação do projeto final
+### 15/03/2021 | Apresentação do projeto final
 
 
 
