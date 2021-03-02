@@ -109,7 +109,7 @@ get_growth_estimates <- function(data,
 }
 
 
-# Seleciona Cor de acordo com o R efetivo
+# Retorna a cor da caixa de acordo (character) com valor numerico (R efetivo)
 colorize_info <- function(value) {
   if (value > 1.2) {
     "red"

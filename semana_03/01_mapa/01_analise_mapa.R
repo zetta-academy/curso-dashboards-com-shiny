@@ -26,7 +26,7 @@ library(rgdal)     # Abrir e manipular shapefiles
 # Baixar dados da API Brasil IO
 # OBS: Pode demorar um pouco dependendo de sua conexao
 covid19 <- read_csv("https://data.brasil.io/dataset/covid19/caso_full.csv.gz") 
-geolocalizacao <- read_csv("starter_template/data/base_geolocalizacao_br.csv")
+geolocalizacao <- read_csv("subprojeto/starter_template/data/base_geolocalizacao_br.csv")
 # Lembre-se de verificar
 
 
@@ -34,7 +34,7 @@ geolocalizacao <- read_csv("starter_template/data/base_geolocalizacao_br.csv")
 # Encontrar código de SP, cidade
 amostra <- covid19[sample(nrow(covid19), 10E4, replace = FALSE), 
                    c("city", "city_ibge_code")]
-# view(amostra)
+view(amostra)
 
 # Código de São Paulo
 cidade_sp <- 3550308
@@ -74,13 +74,14 @@ data_estado_sp %>%
 m <- 
   leaflet() %>% 
   addProviderTiles(providers$Stamen.TonerLite)
-
+m
 
 # Selecionar dados da cidade de Sao Paulo
 cidade_sp_geo <- 
   geolocalizacao %>% 
   filter(codigo_ibge == cidade_sp)
 
+cidade_sp_geo
 
 # Adicionar cidade ao centro do mapa
 m <- 
@@ -89,12 +90,13 @@ m <-
   setView(lng = cidade_sp_geo$longitude,
           lat = cidade_sp_geo$latitude, 
           zoom = 11)
+m
   
 
 # Adicionar divisas das cidades, marcadores e informações no mapa.
 # Ação - Identificar padrões na pasta 'started_template/data/geoson'
 
-caminho_shapefile <- sprintf("starter_template/data/geoson/geojs-%s-mun.json",
+caminho_shapefile <- sprintf("subprojeto/starter_template/data/geoson/geojs-%s-mun.json",
                              substr(cidade_sp, start = 1, stop = 2))
 
 shapefile <- readOGR(caminho_shapefile)
@@ -127,7 +129,7 @@ m <-
               label = ~paste0(name, 
                               ": ",
                               formatC(new_confirmed,
-                                      big.mark = ",")))
+                                      big.mark = ".")))
 m
 
  

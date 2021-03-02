@@ -10,7 +10,7 @@
 #    http://shiny.rstudio.com/
 
 library(shiny)
-library(shinydashboard) # Você precisará instalar
+library(shinydashboard) # Você precisará instalar este pacote
 
 library(tidyverse)
 library(slider)
@@ -55,7 +55,7 @@ shinyServer(function(input, output) {
             filter(is_last, city_ibge_code == codigo_da_cidade) %>% 
             select(new_confirmed)
         
-        infoBox("Casos 24h: ", 
+        infoBox("Casos na ultima observaçao: ", 
                 formatC(casos_ultimo_dia$new_confirmed,
                         digits = 12,
                         big.mark = ".",
