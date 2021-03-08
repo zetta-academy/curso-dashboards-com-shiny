@@ -18,7 +18,7 @@ Palavras-chave: visualização de dados, shiny, R, tidyverse, dashboards, mapas,
 
 # Introdução
 
-O Shiny é uma ferramenta dinâmica, reativa e escalável para a criação de painéis interativos - _Dashboards_. Neste curso, você desenvolverá um projeto de _health analytic_s que permitirá acompanhar os casos de COVID-19 em todos municípios do país. 
+O Shiny é uma ferramenta dinâmica, reativa e escalável para a criação de painéis interativos - _Dashboards_. Neste curso, você desenvolverá um projeto de _health analytics_ que permitirá acompanhar os casos de COVID-19 em todos municípios do país. 
 
 Ao final do curso, você será capaz de desenvolver gráficos e mapas interativos usando diversos pacotes e bibliotecas do R.
 
