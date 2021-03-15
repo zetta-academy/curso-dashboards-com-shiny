@@ -111,16 +111,16 @@ O curso será totalmente online. As aulas serão feitas ao vivo e depois disponi
 ### 15/03/2021 | Apresentação do projeto final
 
 
-
-1. Apresentação dos projetos - três projetos; 70%
-2. Avaliação do curso;
-3. Para saber mais: integração com Python, layout responsivos, autenticação, bibliotecas complementares (REST, Pacotes).
+1. Apresentação dos projetos; 70%
+2. Próximos passos com Shiny: 
+    a. Como criar aplicações Shiny - Design, Protótipo, Construção, Teste e Deploy
+    b. Pacotes (Golem), livros e documentação auxiliar
+3. Avaliação do curso;
 
 
 # Recursos
 
 Github do curso
-
 
 
 *   [https://github.com/zetta-academy/curso-dashboards-com-shiny](https://github.com/zetta-academy/curso-dashboards-com-shiny)
