@@ -72,7 +72,7 @@ shinyServer(function(input, output) {
             select(new_confirmed, date, city_ibge_code) 
         
         r_eff <-get_growth_estimates(data_cidade)
-        mean_reff <- mean(r_eff[[2]])
+        mean_reff <- tail(r_eff$R$`Mean(R)`,1)
         
         valueBox(
             value = formatC(mean_reff,
