@@ -9,9 +9,9 @@ library(plotly)
 #   Shinydashboards - https://rstudio.github.io/shinydashboard/index.html
 #   Shiny - https://shiny.rstudio.com/articles/layout-guide.html
 ui <- dashboardPage(
-    skin = "black",
     dashboardHeader(
-        title = "Zetta Health Analytics - Dashboards com Shiny"
+        title = "Zetta Health Analytics - Dashboards com Shiny",
+        skin = "white"
     ),
     dashboardSidebar(
         sliderInput("bins",
