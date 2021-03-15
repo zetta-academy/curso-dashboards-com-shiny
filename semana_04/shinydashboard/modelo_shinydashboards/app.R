@@ -8,7 +8,6 @@ library(plotly)
 # Documentação para consulta: 
 #   Shinydashboards - https://rstudio.github.io/shinydashboard/index.html
 #   Shiny - https://shiny.rstudio.com/articles/layout-guide.html
-
 ui <- dashboardPage(
     dashboardHeader(
         title = "Zetta Health Analytics - Dashboards com Shiny",
@@ -33,9 +32,6 @@ ui <- dashboardPage(
                            href = "custom.css")
         ),
         # Adiciona linha com caixas
-        fluidRow(
-         h1("Dashboard")
-        ),
         fluidRow(
             valueBox(width = 4, 20, "Caixa 1", icon("credit-card")),
             valueBox(width = 4, 20, "Caixa 2", icon("list")),
